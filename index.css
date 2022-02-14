@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* ---------------- */
+/*     Variables    */
+/* ---------------- */
+:root {
+    /* colors */
+    --cl-primary-dark: 215 51% 70%;
+    --cl-primary-light: 178 100% 50%;
+
+    --cl-secondary-main: 217 54% 11%;
+    --cl-secondary-card: 216 51% 16%;
+    --cl-secondary-line: 215 32% 27%;
+    --cl-white: 0 0% 100%;
+
+    /* font-sizes */
+    --fs-500: 1.375
+    --fs-400: 1.125rem;
+    --fs-300: 1rem;
+
+    /* font-families */
+    --ff-outfit: "Outfit", serif;
+}
+/* ---------------- */
+/*      Resets      */
+/* ---------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* reset the margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+/* set font weight */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* set up the body */
+body {
+    font-family: var(--ff-outfit);
+}
+
+/* makes images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* makes form elements eaiser to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+/* ---------------- */
+/*      Utility     */
+/* ---------------- */
+
+/* general */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem)
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem)
+}
+
+.container {
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 80rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px; 
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+}
+
+/* colors */
+
+.bg-main { background-color: hsl( var(--cl-secondary-main) / 1); }
+.bg-card { background-color: hsl( var(--cl-secondary-card) / 1); }
+.bg-white { background-color: hsl( var(--cl-white) / 1); }
+
+.text-dark { color: hsl( var(--cl-primary-dark) / 1); }
+.text-light { color: hsl( var(--cl-primary-light) / 1); }
+.text-white { color: hsl( var(--cl-white) / 1); }
+
+/* typography */
+
+.line-spacing-1 { line-height : 28px; }
+.line-spacing-2 { line-height : 26px; }
+.line-spacing-3 { line-height : 28px; }
+.line-spacing-4 { line-height : 18.9px; }
+
+.fw-light { font-weight: 300; }
+.fw-normal { font-weight: 400; }
+.fw-semi { font-weight: 600; }
+
+/* extra */
+
+.link {
+    color: hsl( var(--cl-white) / 1);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: hsl( var(--cl-primary-light) / 1);
+}
+
+/* ---------------- */
+/*    Components    */
+/* ---------------- */
+
+.card {
+    width: 350px;
+    height: 596px;
+    border-radius: 15px;
+    box-shadow: 0 25px 50px hsl(0,0,0 / .09);
+    padding: 24px;
+}
+
+.card-img {
+    border-radius: 8px;
+}
+
+.card-avatar {
+    width: 33px;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
