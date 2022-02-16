@@ -166,7 +166,6 @@ select {
 main {
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
     height: 100vh;
 }
 
@@ -181,11 +180,6 @@ main {
 .card-img {
     border-radius: 8px;
     margin-bottom: 1.5rem;
-}
-
-.card-img::hover,
-.card-img::focus { 
-    background-color: hsl( var(--cl-primary-light) / .5);
 }
 
 .card-avatar {
@@ -205,8 +199,19 @@ main {
     grid-template-columns: 1fr 1fr;
 }
 
+.card-value {
+    gap: .405rem;
+}
+
 .card-time {
-    text-align: right;
+    display: inline-flex;
+    border: 1px solid red;
+}
+
+.card-time-img {
+    width: 1rem; 
+    height: 1rem;
+    margin: auto;
 }
 
 .card > hr {
