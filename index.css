@@ -205,7 +205,6 @@ main {
 
 .card-time {
     display: inline-flex;
-    border: 1px solid red;
 }
 
 .card-time-img {
